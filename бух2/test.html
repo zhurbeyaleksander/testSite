@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> Адаптивное фоновое изображение на CSS </title>  
+</head>
+<body>
+<style>
+    .block {
+        width:90%;
+        max-width: 900px;
+        padding:25px;
+        color:#fff;
+        text-align: center;
+    }
+    /*Большое фоновое изображение*/
+    #fon_img{
+        height:800px;
+        background:url(img/greet.jpg) no-repeat center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    @media(max-width:1016px){
+        #fon_img{
+             height:600px;
+       }
+    }
+    @media(max-width:768px){
+        #fon_img{
+             height:400px;
+       }
+    }
+    @media(max-width:480px){
+        #fon_img{
+             height:250px;
+       }
+    }
+</style>
+<section id="fon_img">
+    <div class="block">
+        <h3> Адаптивное фоновое изображение на CSS </h3>
+        <p>Это изображение всегда будет иметь 100% ширину, так как его контейнер не имеет значения максимальной ширины (max-width)</p>
+    </div>  
+</section>
+</body>
+</html>
